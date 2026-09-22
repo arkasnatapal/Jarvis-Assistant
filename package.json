@@ -1,0 +1,25 @@
+{
+  "name": "jarvis-root",
+  "private": true,
+  "version": "0.1.0",
+  "description": "JARVIS — Personal AI Operating System & Digital Assistant",
+  "scripts": {
+    "dev": "pnpm --parallel --filter \"@jarvis/*\" dev",
+    "dev:server": "pnpm --filter @jarvis/server dev",
+    "dev:web": "pnpm --filter @jarvis/web dev",
+    "local-agent": "python apps/local-agent/main.py",
+    "build": "pnpm --recursive run build",
+    "test": "pnpm --recursive run test",
+    "lint": "pnpm --recursive run lint",
+    "clean": "pnpm --recursive run clean"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
